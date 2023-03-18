@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend": "cd frontend && npm start",
     "api": "cd backend && npm start",
+    "build": "react-scripts build",
     "dev": "concurrently --kill-others-on-fail \"npm run backend\" \"npm run frontend\"",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
