@@ -1,0 +1,23 @@
+{
+  "name": "web-stream",
+  "version": "1.0.0",
+  "description": "A NodeJS &amp; React based web app, creating a live stream from an IPhone camera to a web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm start",
+    "api": "cd backend && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run backend\" \"npm run frontend\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harrison25000/web-stream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harrison25000/web-stream/issues"
+  },
+  "homepage": "https://github.com/Harrison25000/web-stream#readme"
+}

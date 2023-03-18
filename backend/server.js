@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require('cors')
 const app = express();
+const path = require('path')
 var router = express.Router();
 
 app.use(cors());
@@ -21,6 +22,8 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, '../frontend/build')))
 
 let broadcaster;
 const port = process.env.PORT || 4000;
@@ -62,5 +65,10 @@ io.sockets.on("connection", socket => {
 router.get('/getio', (req, res) => {
     return (io);
 });
+
+// AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/../frontend/build/index.html'))
+})
 
 server.listen(port, () => console.log(`Server is running on port ${port}`));
