@@ -1,0 +1,64 @@
+#videoStream {
+    width: 100%;
+    border: solid red;
+}
+
+.VideoButtons {
+    width: 100%;
+    position: relative;
+    display: flex;
+    z-index: 2;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.Button {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#playButtonText {
+    transform: rotate(-45deg);
+    margin-right: 50%;
+}
+
+.WatchVideoSection {
+    width: 100%;
+}
+
+.WatchVideoSubSection {
+    width: 70%;
+    margin-left: 5%;
+}
+
+.CommentVideoSection {
+    width: 50%;
+}
+
+#numberOfViewers {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+@media (max-width:960px) {
+    .WatchVideoSubSection {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: auto;
+    }
+
+    .CommentVideoSection {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 100%;
+    }
+
+    .CommentSection {
+        width: 84% !important;
+        margin-top: 2%;
+    }
+}
