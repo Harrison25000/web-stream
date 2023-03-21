@@ -20,7 +20,7 @@ To run:
 What I would look into in the future:
     - WebRTC to replace Socket.io or work along side it.
     - Additional broadcasting rooms and allow people to watch different streamers.
-    - Security & automated testing. Currently broadcasts can just be overruled by the next person to go to the broadcast url, this could be fixed by providing unique broadcasting urls for broadcasters. Or simply allow only one broadcaster at a time. I have Jest setup in order to start testing, I would add to this and set up various unit tests.
+    - Security & automated testing. Currently broadcasts can just be overruled by the next person to go to the broadcast url, this could be fixed by providing unique broadcasting urls for broadcasters. Or simply allow only one broadcaster at a time. I have Jest setup in order to start testing, I would add to this and set up various unit tests. Checks for stream start and end etc.
     - TypeScript, for bug solving and readability.
     - Redux, for better state control throughout the site rather than by components.
     - Styling, of course make it all look nicer, provide root css styles for use throughout the website. Favicon for the website tabs. Full screen stream etc.
